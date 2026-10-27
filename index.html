@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Recipe Management System</h1>
+
+  <form id="recipeForm">
+    <h2 id="formTitle">Add New Recipe</h2>
+    <input type="hidden" id="editIndex">
+
+    <label>Title *</label>
+    <input type="text" id="title">
+    <span class="error" id="titleError"></span>
+
+    <label>Ingredients * (one per line)</label>
+    <textarea id="ingredients" rows="4"></textarea>
+    <span class="error" id="ingredientsError"></span>
+
+    <label>Instructions *</label>
+    <textarea id="instructions" rows="4"></textarea>
+    <span class="error" id="instructionsError"></span>
+
+    <label>Image</label>
+    <input type="file" id="image" accept="image/*">
+    <span class="error" id="imageError"></span>
+
+    <button type="submit" id="saveBtn">Add Recipe</button>
+    <button type="button" id="cancelBtn" hidden>Cancel</button>
+  </form>
+
+  <h2 style="text-align:center">My Recipes</h2>
+  <div id="recipeList"></div>
+
+  <div id="viewPanel" class="view" hidden><div class="view-box"></div></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
